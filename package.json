@@ -1,16 +1,16 @@
 {
-  "name": "json2typescript",
-  "displayName": "JSON 2 TypeScript",
+  "name": "json2class",
+  "displayName": "JSON 2 Class",
   "private": true,
   "description": "Convert JSON data to TypeScript interfaces",
-  "version": "1.2.1",
-  "publisher": "michelefenu",
+  "version": "0.0.3",
+  "publisher": "cjfff",
   "repository": {
     "type": "git",
-    "url": "https://github.com/michelefenu/json2typescript-vscode.git"
+    "url": "https://github.com/cjfff/json2class-vscode.git"
   },
   "bugs": {
-    "url": "https://github.com/michelefenu/json2typescript-vscode/issues"
+    "url": "https://github.com/cjfff/json2class-vscode/issues"
   },
   "engines": {
     "vscode": "^1.49.0"
@@ -19,19 +19,19 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:json2typescript.generate"
+    "onCommand:json2class.generate"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "json2typescript.generate",
+        "command": "json2class.generate",
         "title": "Generate TypeScript interfaces from JSON clipboard"
       }
     ],
     "keybindings": [
       {
-        "command": "json2typescript.generate",
+        "command": "json2class.generate",
         "key": "alt+shift+V"
       }
     ]
@@ -44,7 +44,8 @@
     "lint": "eslint src --ext ts",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "install:test": "yarn compile && vsce package && code --install-extension json2class-0.0.1.vsix"
   },
   "devDependencies": {
     "@semantic-release/git": "^9.0.0",
@@ -68,7 +69,7 @@
     "vscode-test": "^1.4.0"
   },
   "dependencies": {
-    "json2interface": "^0.1.13"
+    "@chenxxx/json2class": "0.0.2"
   },
   "release": {
     "branches": "master",
