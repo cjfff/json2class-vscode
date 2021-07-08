@@ -1,15 +1,24 @@
-import * as vscode from 'vscode'
-import { generate } from 'json2interface'
+/*
+ * @Author: your name
+ * @Date: 2021-07-08 17:18:15
+ * @LastEditTime: 2021-07-08 19:29:00
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /json2class-vscode/src/extension.ts
+ */
 
-export function activate (context: vscode.ExtensionContext) {
+import * as vscode from 'vscode'
+const generate = require('@chenxxx/json2class/dist/index').default
+
+export function activate(context: vscode.ExtensionContext) {
   const disposable = vscode.commands.registerCommand(
-    'json2typescript.generate',
+    'json2class.generate',
     () => generateInterfaces()
   )
   context.subscriptions.push(disposable)
 }
 
-async function generateInterfaces () {
+async function generateInterfaces() {
   const clipBoardContent = await readFromClipboard()
 
   try {
@@ -38,9 +47,12 @@ async function generateInterfaces () {
   }
 }
 
-async function readFromClipboard () {
+async function readFromClipboard() {
   return vscode.env.clipboard.readText()
 }
 
 // this method is called when your extension is deactivated
-export function deactivate () {}
+export function deactivate() { }
+
+
+
