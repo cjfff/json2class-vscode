@@ -5,7 +5,7 @@
 
 If there is no editor open a new file will be created.
 
-![json2class usage](https://github.com/michelefenu/json2typescript-vscode/blob/master/assets/json2class-usage.gif?raw=true)
+![json2class usage](https://raw.githubusercontent.com/cjfff/json2class-vscode/master/assets/json2class-usage.gif)
 
 ## Credits
 
