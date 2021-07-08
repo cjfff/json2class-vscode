@@ -1,5 +1,3 @@
-![badge](https://github.com/michelefenu/json2typescript-vscode/workflows/CodeQL/badge.svg)
-![badge2](https://github.com/michelefenu/json2typescript-vscode/workflows/VS%20Code%20Marketplace/badge.svg)
 # JSON 2 classz
 2. Paste it using **ALT + SHIFT + V** or select *Generate TypeScript class from JSON clipboard* from the command palette
 
